@@ -1,20 +1,18 @@
 import re
 
-# ask user to input string
 
-userString = input("Please enter a word or phrase and I will tell you if it's a palindrome:  ")
+def main():
 
-# remove non alpha characters (using regex) and change case
-replacedString = re.sub("[^a-zA-Z]", "", userString).lower()
+    user_string = input("Please enter a word or phrase and I will tell you if it's a palindrome:  ")
 
-reversedString = replacedString[::-1]
+    replaced_string = re.sub("[^a-zA-Z]", "", user_string).lower()
 
-if replacedString == reversedString:
-    print(f"{userString} is a palindrome")
-else:
-    print(f"{userString} isn't a palindrome")
+    reversed_string = replaced_string[::-1]
 
+    if replaced_string == reversed_string:
+        print(f"{user_string} is a palindrome")
+    else:
+        print(f"{user_string} isn't a palindrome")
 
-# reverse string and assign to variable
-
-# compare variables
+if __name__ == '__main__':
+    main()
